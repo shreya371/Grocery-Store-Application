@@ -5,6 +5,7 @@ import App from './App';
 
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure, mount } from 'enzyme';
+import Footer from './Components/HomePage/Home';
 import Footer from './Components/HomePage/Footer';
 configure({ adapter: new Adapter() });
 
