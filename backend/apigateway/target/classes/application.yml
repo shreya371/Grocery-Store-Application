@@ -1,0 +1,34 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: API_GATEWAY
+  cloud:
+    gateway:
+      routes:
+      - id: GROCERY-PRODUCT-SERVICE
+        uri: 
+            lb://GROCERY-PRODUCT-SERVICE
+        predicates:
+        - Path=/ms1/** 
+      - id: GROCERY-CUSTOMER-SERVICE
+        uri: 
+            lb://GROCERY-CUSTOMER-SERVICE
+        predicates:
+        - Path=/ms2/** 
+      - id: GROCERY-LOGIN-SERVICE
+        uri: 
+            lb://GROCERY-LOGIN-SERVICE
+        predicates:
+        - Path=/ms3/**
+        
+      - id: GROCERY-BILLING-SERVICE
+        uri: 
+            lb://GROCERY-BILLING-SERVICE
+        predicates:
+        - Path=/ms4/**
+        
+
+
+
