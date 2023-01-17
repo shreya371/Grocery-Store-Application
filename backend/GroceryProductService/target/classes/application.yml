@@ -1,0 +1,21 @@
+server:
+  port: 9091
+  
+spring:
+  application:
+    name: GROCERY-PRODUCT-SERVICE
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/GroceryMongoDB
+      auto-index-creation: true
+      
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone : http://localhost:8761/eureka/
+  instance:
+      hostname: localhost 
